@@ -35,7 +35,7 @@ if(isset($_POST['email'])) {
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
-  if(!preg_match($email_exp,$wordcount)) {
+  if(!preg_match($email_exp,$email)) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
   }
 
@@ -43,10 +43,6 @@ if(isset($_POST['email'])) {
 
   if(!preg_match($string_exp,$name)) {
     $error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
-
-  if(!preg_match($string_exp,$essaytype)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
   }
 
   if(strlen($message) < 2) {
@@ -68,14 +64,14 @@ if(isset($_POST['email'])) {
 
 
     $email_message .= "First Name: ".clean_string($name)."\n";
-    $email_message .= "Last Name: ".clean_string($essaytype)."\n";
-    $email_message .= "Email: ".clean_string($wordcount)."\n";
-    $email_message .= "email: ".clean_string($email)."\n";
-    $email_message .= "message: ".clean_string($message)."\n";
+    $email_message .= "Essay Type: ".clean_string($essaytype)."\n";
+    $email_message .= "Word Count: ".clean_string($wordcount)."\n";
+    $email_message .= "Email: ".clean_string($email)."\n";
+    $email_message .= "Message: ".clean_string($message)."\n";
 
 // create email headers
-$headers = 'From: '.$wordcount."\r\n".
-'Reply-To: '.$wordcount."\r\n" .
+$headers = 'From: '.$email."\r\n".
+'Reply-To: '.$email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 ?>
