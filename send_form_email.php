@@ -1,10 +1,10 @@
 <?php
 $recipient = "breezewrite.service@gmail.com";
-$name = $_POST['name']; // required
-$essaytype = $_POST['essaytype']; // required
-$wordcount = $_POST['wordcount']; // required
-$email = $_POST['email']; // not required
-$message = $_POST['message'];
+$name = $_GET['name']; // required
+$essaytype = $_GET['essaytype']; // required
+$wordcount = $_GET['wordcount']; // required
+$email = $_GET['email']; // not required
+$message = $_GET['message'];
 //creating message
 $content = "New contact form submission \n From: ".$name.",\n Email: ".$email.", \n Message: ".$message."\n Word Count: ".$wordcount."\n Essay Type: ".$essaytype;
 //sending message
