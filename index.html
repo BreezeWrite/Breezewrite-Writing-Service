@@ -381,11 +381,12 @@
           <br>
           <div id="Tab5" class="tabcontent">
 <br>
+<!--
 <form action="send_form_email.php" method="get" id="spaceing" data-abide>
 <!--
 <form method="POST" action="send_form_email.php">
 <form action="send_form_email.php" method="get" id="spaceing" data-abide>
--->
+
    名子:<br/>
        <input type="text" name="name" placeholder= "Enter name"/>
        <br/><br/>
@@ -403,7 +404,31 @@
         </textarea><br/>
     <input type="submit" value="Submit" />
 </form>
+-->
+<!--
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdS2lFd0yiWZVEalbPSPOgxeji9g8__lyVmBrbbRszdlAiZYg/viewform?usp=sf_link" target="hidden_iframe" onsubmit="submitted=true;">
+  名子:<br/>
+      <input type="text" name="name" placeholder= "Enter name"/>
+      <br/><br/>
+  写作类型:<br/>
+       <input type="text" name="essaytype" placeholder= "Essay Type"/>
+       <br/><br/>
+  字数:<br/>
+       <input type="text" name="wordcount" placeholder= "Word Count"/>
+       <br/><br/>
+   电子邮件:<br/>
+       <input type="text" name="email" placeholder= "Email"/>
+       <br/><br/>
+   附加说明: <br/>
+       <textarea name= "message" rows="8" cols="50" placeholder = "Additional Instructions"></textarea>
+       </textarea><br/>
+   <input type="submit" value="Submit" />
+  </form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 </div>
+-->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdS2lFd0yiWZVEalbPSPOgxeji9g8__lyVmBrbbRszdlAiZYg/viewform?embedded=true" width="1000" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
           <p></p>
         </center>
         </div>
